@@ -1,0 +1,1 @@
+"""Color generation and terminal adaptation for terminal-cosmos."""

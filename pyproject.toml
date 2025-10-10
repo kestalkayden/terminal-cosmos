@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terminal-cosmos"
+version = "1.0.0"
+description = "Dynamic ASCII terminal animations with anti-flicker technology"
+authors = [{name = "Terminal Cosmos", email = "hello@terminal-cosmos.dev"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console :: Curses",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Artistic Software",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: System :: Shells",
+    "Topic :: Terminals",
+]
+keywords = ["terminal", "animation", "ascii", "curses", "cosmic", "effects"]
+
+[project.scripts]
+terminal-cosmos = "terminal_cosmos.main:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/terminal-cosmos"
+Repository = "https://github.com/your-username/terminal-cosmos"
+Issues = "https://github.com/your-username/terminal-cosmos/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["terminal_cosmos*"]

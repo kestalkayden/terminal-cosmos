@@ -1,0 +1,1 @@
+"""Core animation framework for terminal-cosmos."""

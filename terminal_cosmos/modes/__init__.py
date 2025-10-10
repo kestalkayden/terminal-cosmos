@@ -1,0 +1,1 @@
+"""Animation modes for terminal-cosmos."""
