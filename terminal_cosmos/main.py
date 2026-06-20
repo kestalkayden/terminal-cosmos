@@ -3,7 +3,7 @@ Main entry point for terminal-cosmos.
 
 Provides command-line interface, environment validation, mode instantiation,
 and curses application wrapper. Handles argument parsing for animation modes,
-FPS settings, color schemes, and speed controls.
+color schemes, and visual options.
 
 Key functions:
     - parse_arguments: CLI argument parsing with mode-specific defaults
@@ -18,10 +18,10 @@ Integration points:
     - Wraps core.animation_base framework in curses environment
 
 Configuration:
-    - Supports 4 animation modes: meteor, lightning, space, matrix
+    - Supports 8 animation modes: meteor, lightning, rain, space, matrix, warp, fireworks, fireflies
     - 18 color schemes from cosmic to traditional
-    - Mode-specific optimal FPS: meteor=15, lightning=8, space=30, matrix=12
-    - Speed multiplier and manual FPS override options
+    - Mode-specific FPS: matrix=10, fireworks=30, others=60
+    - CLI flags: --mode, --color/--color-scheme, --intense
 
 Environment validation ensures proper TTY support and curses availability
 before launching animations. Graceful error handling preserves terminal state.
@@ -62,7 +62,7 @@ Examples:
   terminal-cosmos --mode meteor      # Specific mode
   terminal-cosmos --mode space --color cyan --intense
 
-All modes run at 60 FPS for optimal performance and visual quality.
+Most modes run at 60 FPS; matrix runs at 10 and fireworks at 30 for efficiency.
 
 Controls (while running):
   Q/ESC      Quit
